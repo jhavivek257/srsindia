@@ -177,7 +177,7 @@
 		{{-- content page --}}
         @yield('content')
         <footer>
-            <p>Copyright © 2022 Soeng Souy.</p>
+            <p>Copyright © 2023 Shree Rani Sathi Group.</p>
         </footer>
     
     </div>
