@@ -11,7 +11,7 @@
         if ($hour == 00 && $hour <= 9 && $minute <= 59 && $second <= 59) {
             $greet = "Good Morning,";
         } else if ($hour >= 10 && $hour <= 11 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Day,";
+            $greet = "Good Evening,";
         } else if ($hour >= 12 && $hour <= 15 && $minute <= 59 && $second <= 59) {
             $greet = "Good Afternoon,";
         } else if ($hour >= 16 && $hour <= 23 && $minute <= 59 && $second <= 59) {
