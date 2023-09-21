@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Admin Dashboard</title>
+    <title>Shree Rani Sathi group Dashboard</title>
     <link rel="shortcut icon" href="{{ asset('backend/assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/feather/feather.css') }}">

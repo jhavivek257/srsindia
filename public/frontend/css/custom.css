@@ -1,0 +1,19 @@
+span.word {
+    color: #8bb867;
+}
+
+.fancy-text-box-style-02 .text-box-wrapper .text-box, .fancy-text-box-style-02 .text-box-wrapper .text-box-hover {
+    padding: 30px 20px 25px;
+}
+.justify-content-right{
+    justify-content: right !important;
+}
+.address-widget .icon-small {
+    font-size: 22px;
+}
+.tab-style-01 .nav-tabs>li.nav-item {
+    padding: 0 15px;
+}
+.bg-gradient-tussock-greenish-slate {
+    background: linear-gradient(40deg,#355d43 0,#a3c566 100%);
+}

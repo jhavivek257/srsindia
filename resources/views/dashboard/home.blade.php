@@ -3,19 +3,17 @@
 @section('content')
 <?php
 
-    $hour   = date ("G");
-    $minute = date ("i");
-    $second = date ("s");
+    $time = date("H");
+    $timezone = date("e");
     $msg = " Today is " . date ("l, M. d, Y.");
-
-    if ($hour == 00 && $hour <= 9 && $minute <= 59 && $second <= 59) {
+    if ($time < "12") {
         $greet = "Good Morning,";
-    } else if ($hour >= 10 && $hour <= 11 && $minute <= 59 && $second <= 59) {
-        $greet = "Good Day,";
-    } else if ($hour >= 12 && $hour <= 15 && $minute <= 59 && $second <= 59) {
+    } else if ($time >= "12" && $time < "17") {
         $greet = "Good Afternoon,";
-    } else if ($hour >= 16 && $hour <= 23 && $minute <= 59 && $second <= 59) {
+    } else if ($time >= "17" && $time < "19") {
         $greet = "Good Evening,";
+    } else if ($time >= "19") {
+        $greet = "Good Night,";
     } else {
         $greet = "Welcome,";
     }
@@ -28,11 +26,12 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12">
+                    <h6>{{ $msg }}</h6>
                     <div class="page-sub-header">
-                        <h3 class="page-title">{{ $greet }} {{ Auth::user()->name }}!</h3>
+                        <h3 class="page-title">{{ $greet }} {{ Session::get('name') }}!</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                            <li class="breadcrumb-item active">{{ Auth::user()->name }}</li>
+                            <li class="breadcrumb-item active">{{ Session::get('name') }}</li>
                         </ul>
                     </div>
                 </div>

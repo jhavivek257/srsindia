@@ -32,9 +32,20 @@ function set_active( $route ) {
     return Request::path() == $route ? 'active' : '';
 }
 
+// all page route
 Route::get('/', function () {
-    return view('auth.login');
+    return view('frontend.index');
 });
+
+Route::get('/contact-us', function () {
+    return view('frontend.contact-us');
+});
+Route::get('/about-us', function () {
+    return view('frontend.about-us');
+});
+
+
+
 
 Route::group(['middleware'=>'auth'],function()
 {
