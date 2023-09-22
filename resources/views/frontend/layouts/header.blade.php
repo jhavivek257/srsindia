@@ -23,20 +23,20 @@
                                     <a href="javascript:void(0)" class="nav-link text-uppercase">Who We Are</a>
                                     <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li class="dropdown"><a href="about-us">Overview</a></li>
+                                        <li class="dropdown"><a href="/about-us">Overview</a></li>
                                         <li class="dropdown">
                                             <a data-bs-toggle="dropdown" href="javascript:void(0);">About Us<i class="fas fa-angle-right dropdown-toggle"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="vision-mission.php">Vision, Mission, Core Values</a></li>
-                                                <li><a href="csr.php">Corporate Social Responsibility</a></li>
-                                                <li><a href="network.php">Our Network</a></li>
-                                                <li><a href="jurney.php">Our Journey</a></li>
-                                                <li><a href="achievemnts.php">Our Achievemnts</a></li>
-                                                <li><a href="director-message.php">Director Message</a></li>
+                                                <li><a href="/vision-mission">Vision, Mission, Core Values</a></li>
+                                                <li><a href="/csr">Corporate Social Responsibility</a></li>
+                                                <li><a href="/network">Our Network</a></li>
+                                                <li><a href="/jurney">Our Journey</a></li>
+                                                <li><a href="/achievements">Our Achievemnts</a></li>
+                                                <li><a href="/director-message">Director Message</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a href="leadership.php">Leadership</a></li>
-                                        <li class="dropdown"><a href="news.php">In the News</a></li>
+                                        <li class="dropdown"><a href="/leadership">Leadership</a></li>
+                                        <li class="dropdown"><a href="/news">In the News</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown megamenu">
@@ -108,7 +108,7 @@
                                         <li class="dropdown"><a href="javascript:void(0)">Why SRS</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown simple-dropdown"><a href="contact-us" class="nav-link text-uppercase">Contact Us</a></li>
+                                <li class="nav-item dropdown simple-dropdown"><a href="/contact-us" class="nav-link text-uppercase">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>

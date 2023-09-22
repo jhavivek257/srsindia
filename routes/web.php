@@ -12,6 +12,18 @@ use App\Http\Controllers\Setting;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\WebController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\VisionController;
+use App\Http\Controllers\LeadershipController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CsrController;
+use App\Http\Controllers\DirectorController;
+use App\Http\Controllers\NetworkController;
+use App\Http\Controllers\JurneyController;
+use App\Http\Controllers\AchievementsController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,18 +44,19 @@ function set_active( $route ) {
     return Request::path() == $route ? 'active' : '';
 }
 
-// all page route
-Route::get('/', function () {
-    return view('frontend.index');
-});
-
-Route::get('/contact-us', function () {
-    return view('frontend.contact-us');
-});
-Route::get('/about-us', function () {
-    return view('frontend.about-us');
-});
-
+// all frontend page route
+Route::get('/', [WebController::class, 'index']);
+Route::get('/about-us', [AboutController::class, 'index']);
+Route::get('/contact-us', [ContactController::class, 'index']);
+Route::get('/vision-mission', [VisionController::class, 'index']);
+Route::get('/leadership', [LeadershipController::class, 'index']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/csr', [CsrController::class, 'index']);
+Route::get('/director-message', [DirectorController::class, 'index']);
+Route::get('/network', [NetworkController::class, 'index']);
+Route::get('/jurney', [JurneyController::class, 'index']);
+Route::get('/achievements', [AchievementsController::class, 'index']);
+Route::get('/distribution-network-placement', [ServiceController::class, 'index']);
 
 
 

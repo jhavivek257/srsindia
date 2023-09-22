@@ -2,9 +2,8 @@
 @extends('layouts.master')
 @section('content')
 <?php
-
+    date_default_timezone_set("Asia/Calcutta");
     $time = date("H");
-    $timezone = date("e");
     $msg = " Today is " . date ("l, M. d, Y.");
     if ($time < "12") {
         $greet = "Good Morning,";
