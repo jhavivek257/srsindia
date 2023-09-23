@@ -53,6 +53,7 @@ class StudentController extends Controller
            
             $upload_file = rand() . '.' . $request->upload->extension();
             $request->upload->move(storage_path('app/public/student-photos/'), $upload_file);
+            
             if(!empty($request->upload)) {
                 $student = new Student;
                 $student->first_name   = $request->first_name;

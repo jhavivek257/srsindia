@@ -18,7 +18,7 @@
             </div>
             {{-- message --}}
             {!! Toastr::message() !!}
-            <div class="student-group-form">
+            <!-- <div class="student-group-form">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="form-group">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card card-table comman-shadow">
@@ -94,7 +94,7 @@
                                             <td>
                                                 <h2 class="table-avatar">
                                                     <a href="student-details.html"class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle" src="{{ Storage::url('/student-photos/'.$list->upload) }}" alt="User Image">
+                                                        <img src="{{ Storage::url('student-photos/'. $list->upload) }}" alt="User Image">
                                                     </a>
                                                     <a href="student-details.html">{{ $list->first_name }} {{ $list->last_name }}</a>
                                                 </h2>
