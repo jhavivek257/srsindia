@@ -46,16 +46,16 @@
                                         <div class="d-lg-flex justify-content-center">
                                             <ul class="d-lg-inline-block">
                                                 <li class="dropdown-header">Our Services</li>
-                                                <li><a href="distribution-network-placement.php">Distribution Network placement</a></li>
-                                                <li><a href="modern-trade-placement.php">Modern Trade Placement</a></li>
-                                                <li><a href="online-marketing.php">Online Marketing</a></li>
-                                                <li><a href="cfa-operations.php">CFA Operations</a></li>
-                                                <li><a href="brand-consultancy.php">Business Consultancy</a></li>
-                                                <li><a href="brand-development.php">Brand Development</a></li>
+                                                <li><a href="distribution-network-placement">Distribution Network placement</a></li>
+                                                <li><a href="modern-trade-placement">Modern Trade Placement</a></li>
+                                                <li><a href="online-marketing">Online Marketing</a></li>
+                                                <li><a href="cfa-operations">CFA Operations</a></li>
+                                                <li><a href="brand-consultancy">Business Consultancy</a></li>
+                                                <li><a href="brand-development">Brand Development</a></li>
                                             </ul>
                                             <ul class="d-lg-inline-block">
                                                 <li class="dropdown-header">Industries we Served</li>
-                                                <li><a href="food-beverages.php">Food & Beverages</a></li>
+                                                <li><a href="food-beverages">Food & Beverages</a></li>
                                                 <li><a href="javascript:void(0)">Cosmetics & Personal Care</a></li>
                                                 <li><a href="javascript:void(0)">Mobile & Telecom</a></li>
                                                 <li><a href="javascript:void(0)">Electrical Appliances</a></li>
@@ -63,15 +63,15 @@
                                             </ul>
                                             <ul class="d-lg-inline-block">
                                                 <li class="dropdown-header">Our Brands</li>
-                                                <li><a href="our-brands.php">Candzey</a></li>
-                                                <li><a href="our-brands.php">Tekaram</a></li>
-                                                <li><a href="our-brands.php">Otler Grean Tea</a></li>
-                                                <li><a href="our-brands.php">Mother's Choice</a></li>
-                                                <li><a href="our-brands.php">Gokul</a></li>
+                                                <li><a href="our-brands">Candzey</a></li>
+                                                <li><a href="our-brands">Tekaram</a></li>
+                                                <li><a href="our-brands">Otler Grean Tea</a></li>
+                                                <li><a href="our-brands">Mother's Choice</a></li>
+                                                <li><a href="our-brands">Gokul</a></li>
                                             </ul>
                                             <ul class="d-lg-inline-block">
                                                 <li class="dropdown-header">Success Stories</li>
-                                                <li><a href="hamdard.php">Hamdard</a></li>
+                                                <li><a href="hamdard">Hamdard</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -83,7 +83,7 @@
                                         <li class="dropdown">
                                             <a data-bs-toggle="dropdown" href="javascript:void(0);">Industry Insights<i class="fas fa-angle-right dropdown-toggle"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="fmcg.php">FMCG</a></li>
+                                                <li><a href="fmcg">FMCG</a></li>
                                                 <li><a href="javascript:void(0)">Telecom</a></li>
                                                 <li><a href="javascript:void(0)">Health Care</a></li>
                                                 <li><a href="javascript:void(0)">Cosmetics</a></li>
@@ -102,10 +102,10 @@
                                     <a href="javascript:void(0)" class="nav-link text-uppercase">Career</a>
                                     <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li class="dropdown"><a href="javascript:void(0)">Job Applying Portal</a></li>
-                                        <li class="dropdown"><a href="javascript:void(0)">Employee Testimonial</a></li>
-                                        <li class="dropdown"><a href="srs-life.php">Life at SRS</a></li>
+                                        <li class="dropdown"><a href="/jobs">Job Applying Portal</a></li>
+                                        <li class="dropdown"><a href="srs-life">Life at SRS</a></li>
                                         <li class="dropdown"><a href="javascript:void(0)">Why SRS</a></li>
+                                        <li class="dropdown"><a href="javascript:void(0)">Employee Testimonial</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown simple-dropdown"><a href="/contact-us" class="nav-link text-uppercase">Contact Us</a></li>

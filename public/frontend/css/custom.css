@@ -17,3 +17,7 @@ span.word {
 .bg-gradient-tussock-greenish-slate {
     background: linear-gradient(40deg,#355d43 0,#a3c566 100%);
 }
+
+.jobs-content-box p {
+    margin-bottom: 0;
+}

@@ -23,7 +23,11 @@ use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\NetworkController;
 use App\Http\Controllers\JurneyController;
 use App\Http\Controllers\AchievementsController;
+use App\Http\Controllers\SrslifeController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\GroupcompanyController;
+use App\Http\Controllers\SuccessstoriesController;
+use App\Http\Controllers\Jobportalcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +60,17 @@ Route::get('/director-message', [DirectorController::class, 'index']);
 Route::get('/network', [NetworkController::class, 'index']);
 Route::get('/jurney', [JurneyController::class, 'index']);
 Route::get('/achievements', [AchievementsController::class, 'index']);
+Route::get('/srs-life', [SrslifeController::class, 'index']);
 Route::get('/distribution-network-placement', [ServiceController::class, 'index']);
+Route::get('/modern-trade-placement', [ServiceController::class, 'moderntrade']);
+Route::get('/online-marketing', [ServiceController::class, 'onlinemarketing']);
+Route::get('/cfa-operations', [ServiceController::class, 'cfaoperation']);
+Route::get('/brand-consultancy', [ServiceController::class, 'businessConsultancy']);
+Route::get('/brand-development', [ServiceController::class, 'brandDevelopment']);
+Route::get('/our-brands', [GroupcompanyController::class, 'index']);
+Route::get('/hamdard', [SuccessstoriesController::class, 'index']);
+Route::get('/jobs', [Jobportalcontroller::class, 'index']);
+Route::get('/jobsdetails', [Jobportalcontroller::class, 'jobsdetails']);
 
 
 
