@@ -16,20 +16,17 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
+    <!-- <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-lite.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-lite.min.js') }}"> -->
     
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    
+     
 	{{-- message toastr --}}
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/toastr.min.css') }}">
 	<script src="{{ asset('backend/assets/js/toastr_jquery.min.js') }}"></script>
 	<script src="{{ asset('backend/assets/js/toastr.min.js') }}"></script>
     
-    <script>
-    $(document).ready(function() {
-        $('#content').summernote();
-    });
-  </script>
+    
     
 </head>
 <body>
@@ -210,9 +207,26 @@
     <script src="{{ asset('backend/assets/plugins/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.js"></script>
     
-    
+    <script>
+    $(document).ready(function() {
+        $('#content').summernote({
+            placeholder: 'Hello Bootstrap 4',
+            tabsize: 2,
+            height: 300,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    });
+  </script>
     
     @yield('script')
 </body>
