@@ -10,8 +10,8 @@ use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\TypeFormController;
 use App\Http\Controllers\Setting;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
@@ -106,8 +106,6 @@ Route::controller(RegisterController::class)->group(function () {
 Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'index')->middleware('auth')->name('home');
     Route::get('user/profile/page', 'userProfile')->middleware('auth')->name('user/profile/page');
-    Route::get('teacher/dashboard', 'teacherDashboardIndex')->middleware('auth')->name('teacher/dashboard');
-    Route::get('student/dashboard', 'studentDashboardIndex')->middleware('auth')->name('student/dashboard');
 });
 
 // ----------------------------- user controller -------------------------//
@@ -136,20 +134,20 @@ Route::controller(StudentController::class)->group(function () {
     Route::get('student/profile/{id}', 'studentProfile')->middleware('auth'); // profile student
 });
 
-// ------------------------ teacher -------------------------------//
-Route::controller(TeacherController::class)->group(function () {
-    Route::get('teacher/add/page', 'teacherAdd')->middleware('auth')->name('teacher/add/page'); // page teacher
-    Route::get('teacher/list/page', 'teacherList')->middleware('auth')->name('teacher/list/page'); // page teacher
-    Route::get('teacher/grid/page', 'teacherGrid')->middleware('auth')->name('teacher/grid/page'); // page grid teacher
-    Route::post('teacher/save', 'saveRecord')->middleware('auth')->name('teacher/save'); // save record
-    Route::get('teacher/edit/{id}', 'editRecord'); // view teacher record
-    Route::post('teacher/update', 'updateRecordTeacher')->middleware('auth')->name('teacher/update'); // update record
-    Route::post('teacher/delete', 'teacherDelete')->name('teacher/delete'); // delete record teacher
+// ------------------------ Client -------------------------------//
+Route::controller(ClientController::class)->group(function () {
+    Route::get('client/list', 'client')->middleware('auth')->name('client/list'); // list student
+    Route::get('client/add/page', 'clientAdd')->middleware('auth')->name('client/add/page'); // page student
+    Route::post('client/add/save', 'clientSave')->name('client/add/save'); // save record student
+    Route::post('client/delete', 'clientDelete')->name('client/delete'); // delete record student
 });
 
-// ----------------------- department -----------------------------//
-Route::controller(DepartmentController::class)->group(function () {
-    Route::get('department/list/page', 'departmentList')->middleware('auth')->name('department/list/page'); // department/list/page
-    Route::get('department/add/page', 'indexDepartment')->middleware('auth')->name('department/add/page'); // page add department
-    Route::get('department/edit/page', 'editDepartment')->middleware('auth')->name('department/edit/page'); // page add department
+
+// ------------------------ Client -------------------------------//
+Route::controller(CareerController::class)->group(function () {
+    Route::get('career/list', 'index')->middleware('auth')->name('career/list'); // list student
+    Route::get('career/add/page', 'create')->middleware('auth')->name('career/add/page'); // page student
+    // Route::post('career/add/save', 'careerSave')->name('career/add/save'); // save record student
+    // Route::post('career/delete', 'careerDelete')->name('career/delete'); // delete record student
 });
+

@@ -16,10 +16,21 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    
 	{{-- message toastr --}}
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/toastr.min.css') }}">
 	<script src="{{ asset('backend/assets/js/toastr_jquery.min.js') }}"></script>
 	<script src="{{ asset('backend/assets/js/toastr.min.js') }}"></script>
+    
+    <script>
+    $(document).ready(function() {
+        $('#content').summernote();
+    });
+  </script>
+    
 </head>
 <body>
     <div class="main-wrapper">
@@ -44,9 +55,11 @@
                     <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
+
             <a class="mobile_btn" id="mobile_btn">
                 <i class="fas fa-bars"></i>
             </a>
+
             <ul class="nav user-menu">
                 <li class="nav-item dropdown noti-dropdown language-drop me-2">
                     <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
@@ -61,6 +74,7 @@
                         </div>
                     </div>
                 </li>
+
 
                 <li class="nav-item dropdown noti-dropdown me-2">
                     <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
@@ -196,6 +210,10 @@
     <script src="{{ asset('backend/assets/plugins/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}"></script>
+
+    
+    
+    
     @yield('script')
 </body>
 </html>
