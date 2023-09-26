@@ -32,84 +32,25 @@
                     </div>
                 </div>
                 <div class="row align-items-center">
+                    @if(!empty($careerList))
+                    @foreach($careerList as $data)
 
                     <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
                         <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
                             <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
+                                <h6 class="text-extra-dark-gray">{{$data->job_position}}</h6>
+                                <p><strong>Role:</strong> {{$data->job_position}}</p>
+                                <p><strong>Experience:</strong> {{$data->experience}}</p>
+                                <p><strong>Location:</strong> {{$data->location}}</p>
+                                <p><strong>Type:</strong> {{$data->job_type}}</p>
                             </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
+                            <a href="{{ url('/srs/jobs/details/'.$data->id) }}" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
-                        <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
-                            <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
-                            </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
-                        <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
-                            <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
-                            </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
-                        <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
-                            <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
-                            </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
-                        <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
-                            <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
-                            </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 md-margin-15px-bottom margin-20px-bottom">
-                        <div class="bg-white padding-30px-all sm-padding-30px-all last-paragraph-no-margin box-shadow-small">
-                            <div class="jobs-content-box margin-15px-bottom">
-                                <h6 class="text-extra-dark-gray">Wordpress Developer</h6>
-                                <p><strong>Role:</strong> Wordpress Developer</p>
-                                <p><strong>Experience:</strong> 2-4Yrs</p>
-                                <p><strong>Location:</strong> Noida</p>
-                                <p><strong>Type:</strong> Full-time</p>
-                            </div>
-                            <a href="#" class="btn btn-fancy btn-very-small btn-olivine-green section-link align-self-start">Apply Now<i class="fas fa-arrow-right right-icon"></i></a>
-                        </div>
-                    </div>
-                    
-                   
 
-                    
-                    
+                    @endforeach
+                    @endif
+
                 </div>
             </div>
         </section>

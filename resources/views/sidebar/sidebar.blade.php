@@ -52,7 +52,7 @@
                     </a>
                     <ul>
                         <li><a href="{{ route('career/list') }}"  class="{{set_active(['career/list','career/list'])}}">Career List</a></li>
-                        <li><a href="{{ route('client/add/page') }}" class="{{set_active(['client/add/page'])}}">Career Add</a></li>
+                        <li><a href="{{ route('career/add/page') }}" class="{{set_active(['career/add/page'])}}">Career Add</a></li>
                     </ul>
                 </li>
 

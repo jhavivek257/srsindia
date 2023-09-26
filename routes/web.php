@@ -69,9 +69,6 @@ Route::get('/brand-consultancy', [ServiceController::class, 'businessConsultancy
 Route::get('/brand-development', [ServiceController::class, 'brandDevelopment']);
 Route::get('/our-brands', [GroupcompanyController::class, 'index']);
 Route::get('/hamdard', [SuccessstoriesController::class, 'index']);
-Route::get('/jobs', [Jobportalcontroller::class, 'index']);
-Route::get('/jobsdetails', [Jobportalcontroller::class, 'jobsdetails']);
-
 
 
 Route::group(['middleware'=>'auth'],function()
@@ -143,11 +140,18 @@ Route::controller(ClientController::class)->group(function () {
 });
 
 
-// ------------------------ Client -------------------------------//
+// ------------------------ career -------------------------------//
 Route::controller(CareerController::class)->group(function () {
     Route::get('career/list', 'index')->middleware('auth')->name('career/list'); // list student
     Route::get('career/add/page', 'create')->middleware('auth')->name('career/add/page'); // page student
-    // Route::post('career/add/save', 'careerSave')->name('career/add/save'); // save record student
-    // Route::post('career/delete', 'careerDelete')->name('career/delete'); // delete record student
+    Route::post('career/add/save', 'store')->name('career/add/save'); // save record student
+    Route::post('career/delete', 'destroy')->name('career/delete'); // delete record student
+});
+
+
+// ------------------------ JOb frontend -------------------------------//
+Route::controller(Jobportalcontroller::class)->group(function () {
+    Route::get('/jobs', 'index')->name('job/list');
+    Route::get('/srs/jobs/details/{id}', 'jobsdetails')->name('job/details');
 });
 

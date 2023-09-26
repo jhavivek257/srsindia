@@ -9,12 +9,12 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-8 col-lg-6 text-center text-lg-start">
                         <h1 class="alt-font text-extra-dark-gray font-weight-500 no-margin-bottom d-inline-block">SRS</h1>
-                        <span class="alt-font text-medium d-block d-md-inline-block sm-margin-5px-top">Wordpress Developer</span>
+                        <span class="alt-font text-medium d-block d-md-inline-block sm-margin-5px-top">{{$CareerDetails->job_position}}</span>
                     </div>
                     <div class="col-xl-4 col-lg-6 text-center text-lg-end breadcrumb justify-content-center justify-content-lg-end text-small alt-font md-margin-15px-top">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li>Wordpress Developer</li>
+                            <li>{{$CareerDetails->job_position}}</li>
                         </ul>
                     </div>
                 </div>
@@ -28,30 +28,25 @@
                 <div class="row">
                     <div class="col-12 col-lg-7 col-md-6 md-margin-4-rem-bottom">
                         <div class="jobs-content-box margin-15px-bottom text-dark-charcoal">
-                            <p><strong>Job position:</strong> Wordpress Developer</p>
-                            <p><strong>Job Type:</strong> Full-time</p>
-                            <p><strong>Job Location:</strong> Noida</p>
-                            <p><strong>Experience Required:</strong> 2-4Yrs</p>
+                            <p><strong>Role:</strong> {{$CareerDetails->job_position}}</p>
+                            <p><strong>Type:</strong> {{$CareerDetails->job_type}}</p>
+                            <p><strong>Location:</strong> {{$CareerDetails->job_type}}</p>
+                            <p><strong>Qualification:</strong> {{$CareerDetails->qualification}}</p>
+                            <p><strong>Skills Required:</strong> {{$CareerDetails->skills}}</p>
+                            <p><strong>Experience Required:</strong> {{$CareerDetails->job_type}}</p>
+                            <p><strong>Working Days:</strong> {{$CareerDetails->working_days}}</p>
                             <h6 class="alt-font text-dark-charcoal font-weight-600 letter-spacing-minus-1px margin-5px-bottom margin-15px-top mx-auto xs-w-100">Job Description:</h6>
-                            <p>◉ Bachelor’s degree in computer science, information technology, or a similar field.<br>
-◉ Previous experience working as a react.js developer.<br>
-◉ In-depth knowledge of JavaScript, CSS, HTML, and front-end languages.<br>
-◉ Knowledge of REACT tools including React.js, Webpack, Enzyme, Redux, and Flux.<br>
-◉ Experience with user interface design.<br>
-◉ Knowledge of performance testing frameworks including Mocha and Jest.<br>
-◉ Experience with browser-based debugging and performance testing software.<br>
-◉ Excellent troubleshooting skills.<br>
-◉ Good communication skills.</p>
+                            <div class="content-body">{!! $CareerDetails->content !!}</div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-xl-5 col-lg-5 col-md-4 wow animate__fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                    <div class="col-12 col-xl-5 col-lg-5 col-md-4 wow animate__fadeIn jobform" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
                         <div class="text-center bg-white box-shadow-large border-radius-6px padding-3-rem-tb padding-4-rem-lr sm-padding-5-rem-all xs-padding-3-half-rem-lr xs-padding-6-rem-tb xs-no-border-radius">
                             <span class="alt-font text-medium text-olivine-green text-uppercase font-weight-500 d-block margin-15px-bottom sm-margin-10px-bottom">Shree Rani Sathi Group</span>
                             <h6 class="alt-font text-dark-charcoal font-weight-600 letter-spacing-minus-1px margin-20px-bottom  mx-auto xs-w-100">Apply for this position!</h6>
                             <!-- start contact form -->
                             <form action="email-templates/contact-form.php" method="post" class="margin-20px-bottom">
-                                <input class="medium-input border-radius-5px margin-15px-bottom required" type="text" name="phone" value="Wordpress developer" placeholder="Wordpress Developer" disabled >
+                                <input class="medium-input border-radius-5px margin-15px-bottom required" type="text" name="phone" value="{{$CareerDetails->job_position}}" placeholder="{{$CareerDetails->job_position}}" disabled >
                                 <input class="medium-input border-radius-5px margin-15px-bottom required" type="text" name="name" placeholder="Your name">
                                 <input class="medium-input border-radius-5px margin-15px-bottom required" type="email" name="email" placeholder="Your email address">
                                 <input class="medium-input border-radius-5px margin-15px-bottom required" type="text" name="phone" placeholder="Your phone">

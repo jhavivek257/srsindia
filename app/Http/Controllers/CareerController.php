@@ -37,7 +37,40 @@ class CareerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'job_position'    => 'required|string',
+            'experience'        => 'required|string',
+            'job_type'     => 'required|string',
+            'location'        => 'required|string',
+            'qualification'        => 'required|string',
+            'skills'        => 'required|string',
+            'working_days'        => 'required|string',
+            'editordata'        => 'required|string',
+        ]);
+        
+        DB::beginTransaction();
+        try {
+           
+                 $career = new Career;
+                $career->job_position       = $request->job_position;
+                $career->experience         = $request->experience;
+                $career->job_type           = $request->job_type;
+                $career->location           = $request->location;
+                $career->qualification      = $request->qualification;
+                $career->skills             = $request->skills;
+                $career->working_days       = $request->working_days;
+                $career->content            = $request->editordata;
+                $career->save();
+
+                Toastr::success('Has been add successfully :)','Success');
+                DB::commit();
+                return redirect()->back();
+           
+        } catch(\Exception $e) {
+            DB::rollback();
+            Toastr::error('fail, Add new Client  :)','Error');
+            return redirect()->back();
+        }
     }
 
     /**
@@ -80,8 +113,24 @@ class CareerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        DB::beginTransaction();
+        try {
+           
+            if (!empty($request->id)) {
+                Career::destroy($request->id);
+                DB::commit();
+                Toastr::success('Career deleted successfully :)','Success');
+                return redirect()->back();
+            }
+    
+        } catch(\Exception $e) {
+            DB::rollback();
+            Toastr::error('Client deleted fail :)','Error');
+            return redirect()->back();
+        }
     }
+
+
 }

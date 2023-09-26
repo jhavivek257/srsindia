@@ -23,7 +23,7 @@
                 <div class="col-sm-12">
                     <div class="card comman-shadow">
                         <div class="card-body">
-                            <form action="{{ route('client/add/save') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('career/add/save') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
-                                            <label>Location<span class="login-danger">*</span></label>
+                                            <label>Qualification<span class="login-danger">*</span></label>
                                             <input type="text" class="form-control @error('qualification') is-invalid @enderror" name="qualification" placeholder="Enter Qualification" value="{{ old('qualification') }}">
                                             @error('qualification')
                                                 <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
-                                            <label>Location<span class="login-danger">*</span></label>
+                                            <label>Skills<span class="login-danger">*</span></label>
                                             <input type="text" class="form-control @error('skills') is-invalid @enderror" name="skills" placeholder="Enter Skills" value="{{ old('skills') }}">
                                             @error('skills')
                                                 <span class="invalid-feedback" role="alert">
@@ -117,12 +117,10 @@
                                     
                                     <div class="col-12 col-sm-12">
                                         <div class="form-group ">
-                                        <textarea id="content" name="editordata"> </textarea>
+                                        <textarea id="content" name="editordata">Hello Srsindia... </textarea>
                                         </div>
                                     </div>
                                   
-                                    
-
                                     <div class="col-12">
                                         <div class="student-submit">
                                             <button type="submit" class="btn btn-primary">Submit</button>

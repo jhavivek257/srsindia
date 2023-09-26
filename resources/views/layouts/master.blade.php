@@ -16,20 +16,14 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
-    <!-- <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-lite.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-lite.min.js') }}"> -->
     
-     
 	{{-- message toastr --}}
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/toastr.min.css') }}">
 	<script src="{{ asset('backend/assets/js/toastr_jquery.min.js') }}"></script>
 	<script src="{{ asset('backend/assets/js/toastr.min.js') }}"></script>
-    
-    
-    
 </head>
 <body>
+    
     <div class="main-wrapper">
         <div class="header">
             <div class="header-left">
@@ -177,16 +171,17 @@
                             </div>
                         </div>
                         <a class="dropdown-item" href="{{ route('user/profile/page') }}">My Profile</a>
-                        <a class="dropdown-item" href="inbox.html">Inbox</a>
                         <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                     </div>
                 </li>
             </ul>
         </div>
+
 		{{-- side bar --}}
 		@include('sidebar.sidebar')
 		{{-- content page --}}
         @yield('content')
+
         <footer>
             <p>Copyright © 2023 Shree Rani Sathi Group.</p>
         </footer>
@@ -206,28 +201,10 @@
     <script src="{{ asset('backend/assets/js/bootstrap-datetimepicker.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.js"></script>
-    
-    <script>
-    $(document).ready(function() {
-        $('#content').summernote({
-            placeholder: 'Hello Bootstrap 4',
-            tabsize: 2,
-            height: 300,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-            ]
-        });
-    });
-  </script>
-    
-    @yield('script')
+    <script src="{{ asset('backend/assets/js/form-editor.init.js') }}"></script>
+
+@yield('script')
 </body>
 </html>

@@ -45,7 +45,7 @@
                                                 </div>
                                             </th>
                                             <th>ID</th>
-                                            <th>Job Position</th>
+                                            <th>Job Name</th>
                                             <th>Experience</th>
                                             <th>Job Type</th>
                                             <th>Location</th>
@@ -78,7 +78,7 @@
                                                     <!-- <a href="{{ url('client/edit/'.$list->id) }}" class="btn btn-sm bg-danger-light">
                                                         <i class="feather-edit"></i>
                                                     </a> -->
-                                                    <a class="btn btn-sm bg-danger-light client_delete" data-bs-toggle="modal" data-bs-target="#clientUser">
+                                                    <a class="btn btn-sm bg-danger-light career_delete" data-bs-toggle="modal" data-bs-target="#careerUser">
                                                         <i class="feather-trash-2 me-1"></i>
                                                     </a>
                                                 </div>
@@ -96,7 +96,7 @@
     </div>
 
     {{-- model student delete --}}
-    <div class="modal fade contentmodal" id="clientUser" tabindex="-1" aria-hidden="true">
+    <div class="modal fade contentmodal" id="careerUser" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content doctor-profile">
                 <div class="modal-header pb-0 border-bottom-0  justify-content-end">
@@ -105,7 +105,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('client/delete') }}" method="POST">
+                    <form action="{{ route('career/delete') }}" method="POST">
                         @csrf
                         <div class="delete-wrap text-center">
                             <div class="del-icon">
@@ -113,7 +113,7 @@
                             </div>
                             <input type="hidden" name="id" class="e_id" value="">
                             <input type="hidden" name="avatar" class="e_avatar" value="">
-                            <h2>Sure you want to delete</h2>
+                            <h2>Sure you want to delete!!</h2>
                             <div class="submit-section">
                                 <button type="submit" class="btn btn-success me-2">Yes</button>
                                 <a class="btn btn-danger" data-bs-dismiss="modal">No</a>
@@ -128,7 +128,7 @@
 
     {{-- delete js --}}
     <script>
-        $(document).on('click','.client_delete',function()
+        $(document).on('click','.career_delete',function()
         {
             var _this = $(this).parents('tr');
             $('.e_id').val(_this.find('.id').text());
